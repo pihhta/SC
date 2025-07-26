@@ -1,0 +1,260 @@
+.btn {
+    border-radius: 0px !important;
+}
+
+
+.carousel-inner {
+    height: 75vh;
+}
+
+.third {
+     background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+     background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+     background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.section2 {
+    height: 67vh;
+}
+.s2-h1{
+    margin-bottom: 50px;
+}
+.section2-p {
+    margin-bottom: 1%;
+}
+
+.sliders {
+    width: 500px;
+    height: 300px;
+
+    position: relative;
+    background-size: cover;
+
+    transition: background-image 5s ease;
+}
+
+.cathegory-p{
+    text-align: justify;
+}
+
+@media (max-width: 1300px) {
+    .header0{
+        height: 5vw;
+    }
+.social-nav{
+    width: 10%;
+}
+
+    .header-img {
+        display: flex;
+        flex-direction: row !important;
+        height: 4vw;
+    }
+    
+.carousel-inner {
+    height: 80vh;
+}
+
+.third {
+     background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+    background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+    background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+    .carousel-inner {
+        height: 30vh;
+    }
+
+    .social-nav {
+        width: 10%;
+    }
+
+    .nav {
+        flex-direction: row;
+        width: 100%;
+
+    }
+    .section2{
+        height: 60vw;
+    }
+
+    .footer-img {
+        width: 10vw;
+    }
+
+}
+@media (max-width: 1000px) {
+    .header0{
+        height: 7vw;
+    }
+.social-nav{
+    width: 10%;
+}
+    .section2{
+        height: 70vw;
+    }
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 5vw;
+}
+   
+    .footer-img {
+        width: 10vw;
+    }
+   
+}
+@media (max-width: 900px) {
+     .section2{
+        height: 80vw;
+    }
+}
+@media (max-width: 800px) {
+     .section2{
+        height: 105vw;
+    }
+}
+@media (max-width: 750px) {
+     .section2{
+        height: 115vw;
+    }
+}
+@media (max-width: 650px) {
+    .header0{
+        height: 12vw;
+    }
+.social-nav{
+    width: 12%;
+}
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 8vw;
+}
+
+    .section2 {
+        height: 86vh;
+    }
+    .footer-img {
+        width: 30vw;
+    }
+
+}
+@media (max-width: 400px) {
+    .header0{
+        height: 15vw;
+    }
+.social-nav{
+    width: 17%;
+}
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 10vw;
+}
+    .header-img {
+        display: flex;
+        flex-direction: row !important;
+        height: 10vw;
+    }
+    
+.header2{
+    justify-content: space-between!important;
+}
+
+.carousel-inner {
+    height: 20vh;
+}
+
+.third {
+    background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+    background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+    background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+    .section2 {
+        height: 125vh;
+    }
+
+    .cathegory {
+        margin-top: 10% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        align-self: center !important;
+    }
+
+    .cathegory-h1,
+    .cathegory-p {
+        text-align: center !important;
+    }
+
+    .section3-image {
+        width: 100vw !important;
+        height: auto;
+    }
+}
