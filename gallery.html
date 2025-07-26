@@ -1,0 +1,388 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/aboutusstyle.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    
+
+
+    <title>GALLERY</title>
+    <style>
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+            height: 100%;
+            width: 100%;
+        }
+
+        .gallery-img-container {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;
+            /* Соотношение 4:3 */
+            overflow: hidden;
+        }
+
+        .gallery-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Модальное окно */
+        .modal-img {
+            max-width: 100%;
+            max-height: 80vh;
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-size: 1.5rem;
+            opacity: 1;
+            background-color: white;
+            padding: 0.5rem;
+            z-index: 1050;
+        }
+
+        .modal-content {
+            background: transparent;
+            border: none;
+        }
+
+        /* Заголовок галереи */
+        .gallery-title {
+            color: #8B0000;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header0 d-flex bg-black">
+        <div class="container">
+            <ul class="nav nav-pills d-flex justify-content-end">
+                <li class="nav-item social-nav">
+                    <a class="nav-link " href="#"><img class="header-img" src="./images/socials/TwitterX.png"></a>
+                </li>
+                <li class="nav-item social-nav">
+                    <a class="nav-link" href="#"><img class="header-img" src="./images/socials/Reddit.png"></a>
+                </li>
+                <li class="nav-item social-nav">
+                    <a class="nav-link" href="#"><img class="header-img" src="./images/socials/Facebook F 1.png"></a>
+                </li>
+                <li class="nav-item social-nav">
+                    <a class="nav-link " href="#"><img class="header-img" src="./images/socials/YouTube 1.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header2 ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container mb-2 mb-lg-0">
+                <a class="navbar-brand" href="index.html"><img src="./images/socials/logo-1-130x100.jpg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                    aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav d-flex justify-content-around me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-black nav-link active" aria-current="page" href="index.html">
+                                <p class="h3">HOME</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-black nav-link" href="gallery.html">
+                                <p class="h3">GALLERY</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-black nav-link" href="ourmanufacturing.html">
+                                <p class="h3">OUR MANUFACTURING</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-black nav-link"
+                                href="https://www.akstuff.com/index.php?route=product/category&path=62" target="_blank">
+                                <p class="h3">WHERE TO BUY</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-black nav-link" href="aboutus.html">
+                                <p class="h3">ABOUT US</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Здесь идет остальное содержимое страницы -->
+
+
+    <main>
+
+        <div class="container py-5">
+
+            <!-- Галерея из 20 изображений -->
+            <div class="row">
+                <!-- Карточки с изображениями -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_2280-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0097marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0112marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <!-- Повторяем для всех 20 изображений -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0091marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0303marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0332marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0316(1)marked.JPG" alt="AK-47 Tula Cherry"
+                                class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/DSC_0155marked.JPG" alt="AK-47 Tula Cherry" class="gallery-img"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC00152-before_and_after-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/Airbrush-Image-Enhancer.jpg" alt="AK-47 Tula Cherry"
+                                class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/IaZfmpD5Sm4Z1jsEBOnhHhJIPQAZ181Nw3KDCHrWeevQIc-XRusDwAeNfblCPG2fQn4W7vcu3WD8vSRbuC05-SsH.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/ukCG9KRIV2xccktYEgA3aLrzOJ6-_R-1RKPz5FEAyCVj5Bo-KnR9eWVUslDdnkJLoTZppO0M85VPiU50Ghh2.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC00165-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_3051-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_2252-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_2238-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_2339-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
+                    <div class="gallery-item h-100">
+                        <div class="gallery-img-container">
+                            <img src="./images/allimages/1200x800_watermarked_DSC_2487-900x600.jpg"
+                                alt="AK-47 Tula Cherry" class="gallery-img" data-bs-toggle="modal"
+                                data-bs-target="#imageModal" onclick="setModalImage(this)">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Модальное окно -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-body text-center p-0">
+                        <img id="modalImage" src="" alt="" class="modal-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <script>
+            // Функция для установки изображения в модальное окно
+            function setModalImage(imgElement) {
+                document.getElementById('modalImage').src = imgElement.src;
+                document.getElementById('modalImage').alt = imgElement.alt;
+            }
+        </script>
+    </main>
+    <footer class="py-5 bg-black text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  mb-3 mr-5">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><img class="footer-img" src="./images/socials/logo-1-130x100.jpg">
+                        </li>
+                        <li class="nav-item mb-2">
+                            <h5 href="#" class="p-0 text-white">OFFICIAL WEBSITE SIBERIANCUSTOMS.COM</h5>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <p href="#" class="p-0 text-white">The wooden parts store for the Kalashnikov rifle offers a
+                                wide
+                                selection of unique and quality parts that will help you give your weapon a personal
+                                style. We provide
+                                fast delivery and guarantee excellent service. Upgrade your rifle with us and add a
+                                touch of art to
+                                your arsenal!</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 offset-md-2 col-md-4 mt-3 ml-5">
+                    <ul class="nav flex-column mt-4 h4">
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-light">HOME</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-white">GALLERY</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-white">OUR MANUFACTUTING</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-white">WHERE TO BUY</a></li>
+                        <li class="nav-item mb-3"><a href="#" class="nav-link p-0 text-white">ABOUT US</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>© 2024 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                                src="./images/socials/TwitterX.png"></a>
+                    </li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                                src="./images/socials/Reddit.png"></a>
+                    </li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                                src="./images/socials/Facebook F 1.png"></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                                src="./images/socials/YouTube 1.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

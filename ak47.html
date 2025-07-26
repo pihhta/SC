@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.bundle.js"></script>
+  <style>
+    .size {
+      height: 39vh;
+    }
+
+    .product-card {
+      transition: transform 0.3s;
+      margin: 0 10px;
+    }
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+
+    .carousel-indicators {
+      bottom: -50px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #6c757d;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 765px) {
+      .size {
+        height: 47vh;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .size {
+        height: 45vh;
+      }
+    }
+
+
+    @media (max-width: 430px) {
+      .size {
+        height: 35vh;
+      }
+    }
+  </style>
+  <title>HOME</title>
+</head>
+
+<body>
+  <div class="d-flex bg-black">
+    <div class="container">
+      <ul class="nav nav-pills d-flex justify-content-end">
+        <li class="nav-item social-nav">
+          <a class="nav-link" href="#"><img class="header-img" src="./images/socials/TwitterX.png"></a>
+        </li>
+        <li class="nav-item social-nav">
+          <a class="nav-link" href="#"><img class="header-img" src="./images/socials/Reddit.png"></a>
+        </li>
+        <li class="nav-item social-nav">
+          <a class="nav-link" href="#"><img class="header-img" src="./images/socials/Facebook F 1.png"></a>
+        </li>
+        <li class="nav-item social-nav">
+          <a class="nav-link" href="#"><img class="header-img" src="./images/socials/YouTube 1.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header2 ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container mb-2 mb-lg-0">
+        <a class="navbar-brand" href="index.php"><img src="./images/socials/logo-1-130x100.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+          aria-controls="navbarsExample07" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav d-flex justify-content-around me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="text-black nav-link active" aria-current="page" href="index.html">
+                <p class="h3">HOME</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="text-black nav-link" href="gallery.html">
+                <p class="h3">GALLERY</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="text-black nav-link" href="ourmanufacturing.html">
+                <p class="h3">OUR MANUFACTURING</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="text-black nav-link" href="https://www.akstuff.com/index.php?route=product/category&path=62"
+                target="_blank">
+                <p class="h3">WHERE TO BUY</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="text-black nav-link" href="aboutus.html">
+                <p class="h3">ABOUT US</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <div class="container py-5">
+      <div class="row">
+        <!-- Основное изображение товара -->
+        <div class="col-md-6 mb-4">
+
+          <div class="card  border-0 h-100">
+            <div class="card-body  text-center p-3">
+              <div class="main-image-container"
+                style="height: 400px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <img id="mainProductImage"
+                  src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3061-900x600.jpg"
+                  alt="Премиум куртка SIBERIAN CUSTOMS" class="img-fluid product-image"
+                  style="max-height: 100%; max-width: 100%; object-fit: contain; cursor: zoom-in;"
+                  onclick="window.open(this.src, '_blank')">
+              </div>
+
+              <!-- Галерея миниатюр -->
+              <div class="thumbnail-gallery d-flex justify-content-start gap-2 flex-wrap">
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3061-900x600.jpg"
+                  class="thumbnail img-thumbnail active"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3061-900x600.jpg')">
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3051-900x600.jpg"
+                  class="thumbnail img-thumbnail"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3051-900x600.jpg')">
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3057-900x600.jpg"
+                  class="thumbnail img-thumbnail"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3057-900x600.jpg')">
+
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3071-900x600.jpg"
+                  class="thumbnail img-thumbnail"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3071-900x600.jpg')">
+
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3065-900x600.jpg"
+                  class="thumbnail img-thumbnail"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3065-900x600.jpg')">
+
+                <img src="./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3070-900x600.jpg"
+                  class="thumbnail img-thumbnail"
+                  onclick="changeMainImage('./images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3070-900x600.jpg')">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="col-md-6">
+          <h1 class="mb-3 fs-1 fw-bold">AK-47</h1>
+          <div class="price fs-3 mb-4 ">$289.99 </div>
+
+          <div class="mb-4 color-selector">
+            <h5 class="mb-3">COLOR:</h5>
+            <div class="color-options d-flex flex-wrap gap-3">
+
+
+
+              <div class="color-variant">
+                <button type="button" class="color-option btn p-0 border-0 rounded-circle active"
+                  style="width: 42px; height: 42px; background-color: #790604;" onclick="changeColor('cherry', [
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3061-900x600.jpg',
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3051-900x600.jpg',
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3057-900x600.jpg',
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3071-900x600.jpg',
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3065-900x600.jpg',
+                                    './images/products SC/AK-47/TulaCherry/1200x800_watermarked_DSC_3070-900x600.jpg',
+                                ])">
+
+                </button>
+                <span class="color-name d-block text-center mt-1 small w-25">TULA CHERRY</span>
+              </div>
+
+
+            </div>
+          </div>
+          <p class="text-justify fs-5 fw-normal lh-lg ">The wooden parts store for the Kalashnikov rifle offers a wide
+            selection of unique and quality parts that will help you give your weapon a personal style. We provide
+            fast delivery and guarantee excellent service. Upgrade your rifle with us and add a touch of art to
+            your arsenal!</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="container ">
+
+
+      <div id="recommendationsCarousel" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner size">
+          <!-- Первый слайд (активный) -->
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <!-- Товар 1 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100 border-0">
+
+                  <img src="./images/products SC/AKM/Border Guard Green/1200x800_watermarked_DSC_2423-900x600.jpg"
+                    class="card-img-top " alt="AKM Border Guard Green">
+                  <div class="card-body">
+                    <h5 class="card-title">AKM Border Guard Green</h5>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      
+                        <button  onclick="window.location.href='akm.html?color=green';" class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Товар 2 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100  border-0">
+
+                  <img src="./images/products SC/AKM/Afgan Amber/1200x800_watermarked_DSC_2419-900x600.jpg"
+                    class="card-img-top " alt="AKM Afgan Amber">
+                  <div class="card-body">
+                    <h5 class="card-title">AKM Afgan Amber</h5>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      <button  onclick="window.location.href='akm.html?color=amber';"  class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Товар 3 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100 border-0">
+
+                  <img src="./images/products SC/AK-74/Tula Cherry/1200x800_watermarked_DSC_3140-900x600.jpg"
+                    class="card-img-top " alt="AK-74 Tula Cherry">
+                  <div class="card-body">
+                    <h5 class="card-title">AK-74 Tula Cherry</h5>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      <button  class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- Второй слайд -->
+          <div class="carousel-item">
+            <div class="row g-3">
+              <!-- Товар 5 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100 border-0">
+
+                  <img src="./images/products SC/AKM/Izhmash Red/1200x800_watermarked_DSC_2406-900x600.jpg"
+                    class="card-img-top " alt="AKM Izhmash Red">
+                  <div class="card-body">
+                    <h5 class="card-title">AKM Izhmash Red</h5>
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      <button  onclick="window.location.href='akm.html?color=red';"  class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Товар 6 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100 border-0">
+
+                  <img src="./images/products SC/AK-74/Izhmash Red/1200x800_watermarked_DSC00157-900x600.jpg"
+                    class="card-img-top " alt="AK-74 Izhmash Red">
+                  <div class="card-body">
+                    <h5 class="card-title">AK-74 Izhmash Red</h5>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      <button class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Товар 7 -->
+              <div class="col-md-4">
+                <div class="card product-card h-100 border-0">
+
+                  <img src="./images/products SC/AKM/Tula Cherry/1200x800_watermarked_DSC_3140-900x600.jpg"
+                    class="card-img-top " alt="AKM Tula Cherry">
+                  <div class="card-body">
+                    <h5 class="card-title">AKM Tula Cherry</h5>
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                      <button  onclick="window.location.href='akm.html?color=cherry';"  class="btn btn-sm w-100 btn-dark">go</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Кнопки управления -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#recommendationsCarousel"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#recommendationsCarousel"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon  p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+
+
+
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </main>
+  <footer class="py-5 bg-black text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3 mr-5">
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="navbar-brand p-0 text-light"><img class="footer-img"
+                  src="./images/socials/logo-1-130x100.jpg"></a></li>
+            <li class="nav-item mb-2">
+              <h5 class="p-0 text-white">OFFICIAL WEBSITE SIBERIANCUSTOMS.COM</h5>
+            </li>
+            <li class="nav-ite  
+            
+            m mb-2">
+              <p class="p-0 text-white">The wooden parts store for the Kalashnikov rifle offers a
+                wide
+                selection of unique and quality parts that will help you give your weapon a personal
+                style. We provide
+                fast delivery and guarantee excellent service. Upgrade your rifle with us and add a
+                touch of art to
+                your arsenal!</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 offset-md-2 col-md-4 mt-3 ml-5">
+          <ul class="nav flex-column mt-4 h4">
+            <li class="nav-item mb-3"><a href="index.html" class="nav-link p-0 text-light">HOME</a></li>
+            <li class="nav-item mb-3"><a href="gallery.html" class="nav-link p-0 text-white">GALLERY</a></li>
+            <li class="nav-item mb-3"><a href="ourmanufacturing.html" class="nav-link p-0 text-white">OUR
+                MANUFACTUTING</a></li>
+            <li class="nav-item mb-3"><a href="https://www.akstuff.com/index.php?route=product/category&path=62"
+                target="_blank" class="nav-link p-0 text-white">WHERE TO BUY</a></li>
+            <li class="nav-item mb-3"><a href="aboutus.html" class="nav-link p-0 text-white">ABOUT US</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                src="./images/socials/TwitterX.png"></a>
+          </li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                src="./images/socials/Reddit.png"></a>
+          </li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                src="./images/socials/Facebook F 1.png"></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><img class="header-img"
+                src="./images/socials/YouTube 1.png"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Функция для смены основного изображения по клику на миниатюру
+    function changeMainImage(newImageSrc) {
+      document.getElementById('mainProductImage').src = newImageSrc;
+
+      // Удаляем активный класс у всех миниатюр
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+
+      // Добавляем активный класс к выбранной миниатюре
+      event.target.classList.add('active');
+    }
+
+    // Функция для смены цвета товара
+    function changeColor(color, images) {
+      // Меняем основное изображение
+      document.getElementById('mainProductImage').src = images[0];
+
+      // Обновляем галерею миниатюр
+      const gallery = document.querySelector('.thumbnail-gallery');
+      gallery.innerHTML = '';
+
+      images.forEach((img, index) => {
+        const thumbSrc = img.replace('900x600', '100x100');
+        gallery.innerHTML += `
+                <img src="${thumbSrc}" 
+                     class="thumbnail img-thumbnail ${index === 0 ? 'active' : ''}" 
+                     onclick="changeMainImage('${img}')">
+            `;
+      });
+
+      // Обновляем активный цвет
+      document.querySelectorAll('.color-option').forEach(option => {
+        option.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
+
+  <style>
+    .product-image {
+      transition: opacity 0.3s ease;
+    }
+
+    .main-image-container {
+      background-color: #f8f9fa;
+      border-radius: 0.2px;
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: all 0.2s;
+      opacity: 0.7;
+      border: 0.5px solid #dee2e6 !important;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      opacity: 1;
+      border-color: #000 !important;
+    }
+
+    .color-option {
+      transition: all 0.2s;
+      border: 0.5px solid transparent !important;
+    }
+
+    .color-option:hover,
+    .color-option.active {
+      border-color: #000 !important;
+      transform: scale(1.1);
+    }
+  </style>
+</body>
+
+</html>
