@@ -408,6 +408,7 @@
 
     .section2 {
         height: 145dvh;
+      min-height: -webkit-fill-available; /* Для Safari */
     }
 
     .cathegory {
