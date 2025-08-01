@@ -1,0 +1,52 @@
+.main {
+    /* Базовые стили */
+    background-image: url(../images/socials/3b6712d6-8676-4f6b-8f63-92b46ca2c2a1\ 1\(1\).png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    
+    /* Кроссбраузерное свойство background-size */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    /* Кроссбраузерное свойство background-attachment */
+    background-attachment: fixed;
+    
+    /* Для мобильных устройств - отключаем fixed attachment */
+    @media (max-width: 768px) {
+        background-attachment: scroll;
+        -webkit-background-attachment: scroll;
+        -moz-background-attachment: scroll;
+    }
+    
+    /* Для очень маленьких экранов - корректируем высоту */
+    @media (max-width: 480px) {
+        height: 60vh;
+    }
+    
+    /* Поддержка для IE9-IE11 */
+    @media screen and (min-width:0\0) {
+        /* Альтернатива для background-size: cover в IE */
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+            src='../images/socials/3b6712d6-8676-4f6b-8f63-92b46ca2c2a1 1(1).png',
+            sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+            src='../images/socials/3b6712d6-8676-4f6b-8f63-92b46ca2c2a1 1(1).png',
+            sizingMethod='scale')";
+    }
+    
+    /* Поддержка для Safari < 5.1 */
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+        /* Дополнительные стили если нужно */
+    }
+}
+
+/* Дополнительно: предотвращаем масштабирование на очень маленьких экранах */
+@media (max-width: 320px) {
+    .main {
+        background-size: contain;
+    }
+}
