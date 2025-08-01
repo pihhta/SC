@@ -1,0 +1,431 @@
+  /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    /* Product slider styles */
+    .product-slider {
+      margin: 20px auto;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .main-image {
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 400px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+
+    .main-image img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+    .thumbnail-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      border: none;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      background-color: #ffffff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      border-color: #e7e7e7;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+
+    /* Hide scrollbar */
+    .thumbnail-container::-webkit-scrollbar {
+      display: none;
+    }
+    .thumbnail-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Modal styles */
+    .modal-image {
+      max-width: 100%;
+      max-height: 80vh;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      height: auto;
+    }
+
+    .modal-content {
+      background: transparent;
+      border: none;
+    }
+
+    .modal-header {
+      border: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+    }
+
+    .btn-close {
+      opacity: 1;
+      padding: 100px;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 576px) {
+      .main-image {
+        height: 300px;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(25% - 20px);
+        flex: 1 1 calc(25% - 20px);
+      }
+    }
+
+    /* Section 2 styles */
+    .section2 {
+      min-height: 67vh;
+      height: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    /* Fallback for older browsers */
+    .bg-black {
+      background-color: #000 !important;
+    }
+    .text-white {
+      color: #fff !important;
+    }
+.btn {
+    border-radius: 0px !important;
+}
+
+
+.carousel-inner {
+    height: 75vh;
+}
+
+.third {
+     background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+     background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+     background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.section2 {
+    height: 67vh;
+}
+.s2-h1{
+    margin-bottom: 50px;
+}
+.section2-p {
+    margin-bottom: 1%;
+}
+  
+.sliders {
+    width: 500px;
+    height: 300px;
+
+    position: relative;
+    background-size: cover;
+
+    transition: background-image 5s ease;
+}
+
+.cathegory-p{
+    text-align: justify;
+}
+
+@media (max-width: 1300px) {
+    .header0{
+        height: 5vw;
+    }
+.social-nav{
+    width: 10%;
+}
+
+    .header-img {
+        display: flex;
+        flex-direction: row !important;
+        height: 4vw;
+    }
+    
+.carousel-inner {
+    height: 80vh;
+}
+
+.third {
+     background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+    background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+    background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+    .carousel-inner {
+        height: 30vh;
+    }
+
+    .social-nav {
+        width: 10%;
+    }
+
+    .nav {
+        flex-direction: row;
+        width: 100%;
+
+    }
+    .section2{
+        height: 60vw;
+    }
+
+    .footer-img {
+        width: 10vw;
+    }
+
+}
+@media (max-width: 1000px) {
+    .header0{
+        height: 7vw;
+    }
+.social-nav{
+    width: 10%;
+}
+    .section2{
+        height: 70vw;
+    }
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 5vw;
+}
+   
+    .footer-img {
+        width: 10vw;
+    }
+   
+}
+@media (max-width: 900px) {
+     .section2{
+        height: 80vw;
+    }
+}
+@media (max-width: 800px) {
+     .section2{
+        height: 105vw;
+    }
+}
+@media (max-width: 750px) {
+     .section2{
+        height: 115vw;
+    }
+}
+@media (max-width: 650px) {
+    .header0{
+        height: 12vw;
+    }
+.social-nav{
+    width: 12%;
+}
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 8vw;
+}
+
+    .section2 {
+        height: 86vh;
+    }
+    .footer-img {
+        width: 30vw;
+    }
+
+}
+@media (max-width: 400px) {
+    .header0{
+        height: 15vw;
+    }
+.social-nav{
+    width: 17%;
+}
+.header-img {
+    display: flex;
+    flex-direction: row !important;
+    height: 10vw;
+}
+    .header-img {
+        display: flex;
+        flex-direction: row !important;
+        height: 10vw;
+    }
+    
+.header2{
+    justify-content: space-between!important;
+}
+
+.carousel-inner {
+    height: 20vh;
+}
+
+.third {
+    background-image: url(../images/allimages/DSC_0155marked.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.second {
+    background-image: url(../images/allimages/Siberian_customs-cropped-1140x380.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+    background-image: url(../images/allimages/Group\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+    .section2 {
+        height: 145vh;
+    }
+
+    .cathegory {
+        margin-top: 10% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        align-self: center !important;
+    }
+
+    .cathegory-h1,
+    .cathegory-p {
+        text-align: center !important;
+    }
+
+    .section3-image {
+        width: 100vw !important;
+        height: auto;
+    }
+}
