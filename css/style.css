@@ -149,7 +149,8 @@
 
     /* Section 2 styles */
     .section2 {
-      min-height: 67vh;
+      min-height: 67dvh;
+      min-height: -webkit-fill-available;
       height: auto;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -206,7 +207,8 @@
 }
 
 .section2 {
-    height: 67vh;
+    height: 67dvh;
+  min-height: -webkit-fill-available;
 }
 .s2-h1{
     margin-bottom: 50px;
@@ -288,7 +290,8 @@
 
     }
     .section2{
-        height: 60vw;
+        height: 60dvw;
+      min-height: -webkit-fill-available;
     }
 
     .footer-img {
@@ -304,7 +307,8 @@
     width: 10%;
 }
     .section2{
-        height: 70vw;
+        height: 70dvw;
+      min-height: -webkit-fill-available;
     }
 .header-img {
     display: flex;
@@ -319,17 +323,20 @@
 }
 @media (max-width: 900px) {
      .section2{
-        height: 80vw;
+        height: 80dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 800px) {
      .section2{
-        height: 105vw;
+        height: 105dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 750px) {
      .section2{
-        height: 115vw;
+        height: 115dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 650px) {
@@ -346,7 +353,8 @@
 }
 
     .section2 {
-        height: 86vh;
+        height: 86dvh;
+      min-height: -webkit-fill-available;
     }
     .footer-img {
         width: 30vw;
@@ -560,7 +568,8 @@
 
     /* Section 2 styles */
     .section2 {
-      min-height: 67vh;
+      min-height: 67dvh;
+min-height: -webkit-fill-available;
       height: auto;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -617,7 +626,8 @@
 }
 
 .section2 {
-    height: 67vh;
+    height: 67dvh;
+  min-height: -webkit-fill-available;
 }
 .s2-h1{
     margin-bottom: 50px;
@@ -699,7 +709,8 @@
 
     }
     .section2{
-        height: 60vw;
+        height: 60dvw;
+      min-height: -webkit-fill-available;
     }
 
     .footer-img {
@@ -715,7 +726,8 @@
     width: 10%;
 }
     .section2{
-        height: 70vw;
+        height: 70dvw;
+      min-height: -webkit-fill-available;
     }
 .header-img {
     display: flex;
@@ -730,17 +742,20 @@
 }
 @media (max-width: 900px) {
      .section2{
-        height: 80vw;
+        height: 80dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 800px) {
      .section2{
-        height: 105vw;
+        height: 105dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 750px) {
      .section2{
-        height: 115vw;
+        height: 115dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 650px) {
@@ -757,7 +772,8 @@
 }
 
     .section2 {
-        height: 86vh;
+        height: 86dvh;
+      min-height: -webkit-fill-available;
     }
     .footer-img {
         width: 30vw;
@@ -971,7 +987,8 @@
 
     /* Section 2 styles */
     .section2 {
-      min-height: 67vh;
+      min-height: 67dvh;
+      min-height: -webkit-fill-available;
       height: auto;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1028,7 +1045,8 @@
 }
 
 .section2 {
-    height: 67vh;
+    height: 67dvh;
+  min-height: -webkit-fill-available;
 }
 .s2-h1{
     margin-bottom: 50px;
@@ -1110,7 +1128,8 @@
 
     }
     .section2{
-        height: 60vw;
+        height: 60dvw;
+      min-height: -webkit-fill-available;
     }
 
     .footer-img {
@@ -1126,7 +1145,8 @@
     width: 10%;
 }
     .section2{
-        height: 70vw;
+        height: 70dvw;
+      min-height: -webkit-fill-available;
     }
 .header-img {
     display: flex;
@@ -1141,17 +1161,20 @@
 }
 @media (max-width: 900px) {
      .section2{
-        height: 80vw;
+        height: 80dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 800px) {
      .section2{
-        height: 105vw;
+        height: 105dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 750px) {
      .section2{
-        height: 115vw;
+        height: 115dvw;
+       min-height: -webkit-fill-available;
     }
 }
 @media (max-width: 650px) {
@@ -1168,7 +1191,8 @@
 }
 
     .section2 {
-        height: 86vh;
+        height: 86dvh;
+      min-height: -webkit-fill-available;
     }
     .footer-img {
         width: 30vw;
@@ -1294,3 +1318,4 @@
         height: auto;
     }
 }
+
