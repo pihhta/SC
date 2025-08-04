@@ -1252,7 +1252,7 @@ min-height: -webkit-fill-available;
     width: 100%;
 }
 
-    . {
+    .section2 {
         height: 145dvh;
       min-height: -webkit-fill-available; /* Для Safari */
     }
@@ -1318,5 +1318,6 @@ min-height: -webkit-fill-available;
         height: auto;
     }
 }
+
 
 
